@@ -37,6 +37,7 @@ source ~/.bashrc
 Usage : 
 Run the below command :
 ```bash
+git clone https://github.com/ihe1la/SourceMapperxSec.git
 ./monitor_js_map.sh
 ```
 
