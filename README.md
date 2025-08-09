@@ -19,7 +19,9 @@ cd sourcemapper
 go get
 go build
 
-This installs sourcemapper to ~/go/bin/sourcemapper. Add it to your PATH by :
+This installs sourcemapper to /go/bin/sourcemapper.
+Add it to your PATH by :
+
 export PATH=$PATH:~/go/bin
 echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
 source ~/.bashrc
