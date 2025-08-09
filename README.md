@@ -29,6 +29,7 @@ source ~/.bashrc
 
 Usage : 
 Run the below command :
+
 ./manitor_js_map.sh
 
 
