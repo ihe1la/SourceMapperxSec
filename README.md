@@ -38,6 +38,7 @@ Usage :
 Run the below command :
 ```bash
 git clone https://github.com/ihe1la/SourceMapperxSec.git
+cd SourceMapperxSec
 ./monitor_js_map.sh
 ```
 
