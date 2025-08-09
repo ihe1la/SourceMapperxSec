@@ -68,7 +68,7 @@ check_source_map() {
         send_discord_notification "Source map now accessible at: $MAP_URL"
 
         # Run sourcemapper to extract source map
-       ./sourcemapper/sourcemapper -output "$OUTPUT_DIR/2cd96d1d26f8c2200299" -jsurl "$JS_URL" 2>> "$LOG_FILE"
+       sourcemapper -output "$OUTPUT_DIR/2cd96d1d26f8c2200299" -jsurl "$JS_URL" 2>> "$LOG_FILE"
         if [ $? -eq 0 ]; then
             log_message "Sourcemapper successfully processed: $MAP_URL"
             send_discord_notification "Sourcemapper extracted sources to $OUTPUT_DIR/2cd96d1d26f8c2200299"
