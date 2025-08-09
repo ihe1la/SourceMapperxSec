@@ -39,6 +39,9 @@ Run the below command :
 ```bash
 git clone https://github.com/ihe1la/SourceMapperxSec.git
 cd SourceMapperxSec
+```
+At the End Run :
+```bash
 ./monitor_js_map.sh
 ```
 
