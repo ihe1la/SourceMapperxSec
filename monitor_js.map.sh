@@ -4,7 +4,7 @@
 JS_URL="https://identity.notion.so/identity-main.2cd96d1d26f8c2200299.js"
 MAP_URL="https://identity.notion.so/identity-main.2cd96d1d26f8c2200299.js.map"
 DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1403578193948184717/7i4L4vyw76m6OoQP6oJg5AHujt9jlOeYBY6zQ98PHuHIU04GPQpz3NOVn0JLPA1e8p_a" # Replace with your Discord webhook URL
-OUTPUT_DIR="/tmp/sourcemap_output"
+OUTPUT_DIR="sourcemap_output"
 CHECK_INTERVAL=600 # 10 minutes in seconds
 LOG_FILE="/tmp/sourcemap_log.txt"
 LAST_STATUS_FILE="/tmp/last_map_status.txt"
@@ -68,10 +68,10 @@ check_source_map() {
         send_discord_notification "Source map now accessible at: $MAP_URL"
 
         # Run sourcemapper to extract source map
-       sourcemapper -output "$OUTPUT_DIR/2cd96d1d26f8c2200299" -jsurl "$JS_URL" 2>> "$LOG_FILE"
+       sourcemapper -output "$OUTPUT_DIR/js.map" -jsurl "$JS_URL" 2>> "$LOG_FILE"
         if [ $? -eq 0 ]; then
             log_message "Sourcemapper successfully processed: $MAP_URL"
-            send_discord_notification "Sourcemapper extracted sources to $OUTPUT_DIR/2cd96d1d26f8c2200299"
+            send_discord_notification "Sourcemapper extracted sources to $OUTPUT_DIR/js.map"
         else
             log_message "Sourcemapper failed for: $MAP_URL"
             send_discord_notification "Sourcemapper failed to process $MAP_URL"
