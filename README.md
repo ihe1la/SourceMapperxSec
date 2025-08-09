@@ -37,6 +37,6 @@ source ~/.bashrc
 Usage : 
 Run the below command :
 ```bash
-./manitor_js_map.sh
+./monitor_js_map.sh
 ```
 
